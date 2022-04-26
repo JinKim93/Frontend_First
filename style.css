@@ -1,0 +1,274 @@
+*{
+    font-family: 'Noto Sans KR', sans-serif;
+    /*목록에 점 없애 줌*/
+    list-style: none;
+    /*링크 바로가기 -> 색깔, 밑줄 없애는 기능*/    
+    text-decoration: none; 
+    /*표 겹치는 부분 한줄로 나타내줌 */
+    border-collapse: collapse; 
+    /*기본으로 되있는 margin, padding 0으로 초기화 */
+    margin:0px; 
+    padding:0px;
+    color: #000;
+}
+h1{
+    font-size: 48px;
+    font-weight:100;
+}
+.contents1{
+    font-size:20px;
+    font-weight:lighter;
+}
+.contents1_bold{
+    font-size:18px;
+    font-weight: bold;
+}
+
+.contents2{
+    /*폰트 사이즈*/
+    font-size: 18px;
+
+}
+.contents3{
+    font-size: 14px;
+    font-weight: 100;
+}
+
+/*백그라운드 배경 사진 넣어줌*/
+.intro_bg{ 
+    background-image:url("bread1.jpg");  
+    width:100%;
+    height:714px;
+
+}
+.header{
+    display:flex; /*블록태그 수평 배치해주는 기능 flex search랑 네비bar만 배치 해줌*/
+    width: 1280px;
+    margin:auto;
+    height: 86px;
+
+}
+.searchArea{
+    width:300px;
+    height:40px;
+    /*투명도 조절*/
+    background: rgba(0,0,0,0.5); 
+    border-radius: 5px;
+    margin-top:24px;
+
+}
+.searchArea > form > input{
+    border:none;
+    width:250px;
+    height: 40px;
+    background:rgba(0,0,0,0.0) ;
+    color:#fff;
+    padding-left: 10px;
+}
+.searchArea > form > span{
+    width:50px;
+    color:#fff;
+    font-weight: bold;
+    /* 마우스 클릭 표시 활성*/
+    cursor: pointer;
+
+}
+
+/*네비에도 플렉스를 넣어줘야지 수평 배치 됨*/
+.nav{  
+    display: flex;
+    /*가로축 기준으로 좌우에 대한 정렬 flex-end 컨테이너 우측 정렬*/
+    justify-content: flex-end; 
+    /*글 높이 맞추기*/
+    line-height: 86px;
+    width: calc(1280px - 300px);
+    
+}
+
+/*네비 목록 margin 왼쪽으로 84px*/
+.nav > li{
+    margin-left:84px;
+}
+.nav > li > a{
+    color:#fff;
+}
+.intro_text{
+    width: 100%;
+    /*상 - 우 - 하 -좌*/
+    margin:231px auto 231px auto;
+    text-align: center;
+}
+
+.intro_text > h1,
+.intro_text > h4{
+    color:#fff;
+
+}
+.amount{
+    position: relative;
+    top:-66px;
+    display:flex;
+    width:1280px;
+    background: #fff;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+    margin: auto; 
+}
+.amount > li > div{
+   text-align: center;
+
+  
+   margin-top: 37px;
+   height: 57px; 
+
+}
+.amount > li:not(:last-child) > div{
+    border-right: 1px solid #E1E1E1;
+}
+.amount > li {
+    flex: 1;
+    height:132px;
+    
+}
+.result{
+    font-size:24px;
+}
+
+/*main _text0*/
+/*백그라운드 설정*/
+.main_text0{
+    width: 100%;
+    height: 601px;
+    margin-top: -132px;
+    background: #f1f2f3;
+
+
+}
+/*product 속성 적용*/
+.main_text0 > h1{
+    margin-top: 116px;
+    text-align:center;
+ 
+}
+.main_text0 > .contents1{
+    text-align: center;
+
+}
+.icons{
+    display: flex;
+    width:1280px;
+    height: 302px;
+    margin:auto;
+}
+.icons > li{
+    /*자식요소(li) 한 자리 차지*/
+    flex: 1;
+    background:white;
+    margin-top: 49px;
+    height: 302px;
+    text-align:center ;
+}
+.icons > li > .icon_img{
+    margin-top:18px;
+}
+/*마지막 자식요소만 빼고 오른쪽 margin 주어라*/
+.icons > li:not(:last-child){
+    margin-right: 20px; 
+}
+.icons.contents2{
+    width: 240px;
+    margin:auto ;
+    letter-spacing: -1px;
+
+}
+.more{
+    width: 100px;
+    height: 30px;
+    background: #2F7AF4;
+    color:#fff;
+    font-size: 12px;
+    line-height: 30px;
+    /* 마우스 클릭 표시 활성*/
+    cursor: pointer;
+    margin: 25px auto;
+}
+
+/*maint_text1*/
+.main_text1{
+    width: 100%;
+    height: 659px;
+
+}
+
+.main_text1 > h1{
+    padding-top: 50px;
+    text-align: center;
+}
+
+.main_text1 > .contents1 {
+    text-align: center;
+}
+
+.story {
+    width: 1280px;
+    /*반으로 나눌거다(자식요소 2명) -> food_photo, contents2*/
+    display: flex;
+    margin: 49px auto;
+    height: 427px;
+    
+}
+
+.story > .contents2{
+    padding: 20px;
+
+}
+
+.story > .contents2 > h2
+{
+    margin-bottom: 27px;
+}
+
+/*main_text2*/
+.main_text2 {
+    width:100%;
+    height:418px;
+    background-image: url("contact.png");
+  }
+  
+  .main_text2 > ul {
+    display: flex;
+    padding-top:138px;
+  }
+  
+  .main_text2 > ul > li {
+    flex: 1;
+    text-align: center;
+  }
+  .main_text2 > ul > li > div,
+  .main_text2 > ul > li > div > h1{
+    color: #fff;
+  }
+  .more2{
+    width:220px;
+    height:40px;
+    border: 1px solid #fff;
+    color: #fff;
+    line-height: 40px;
+    cursor: pointer;
+    margin:16px auto;
+  }
+  
+  footer{
+    display: flex;
+    background: #1f1f1f;
+    padding:30px;
+  }
+  /*좌측 영역 3으로 flex*/
+  footer > div:first-child {
+    flex:3;
+    text-align: left;
+    color: #fff;
+  }
+  footer > div:last-child {
+    flex:9;
+    color: #fff;
+  }
